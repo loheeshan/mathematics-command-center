@@ -46,7 +46,7 @@ pnpm test                 216 passed (47 math-engine, 169 question-engine)
 pnpm typecheck            0 errors
 pnpm validate:curriculum  141 topics, 221 DAG edges (acyclic), 33 chapters ↔ 33 PDFs, 27 sims, 53 templates, 11 lessons (11 with all 12 stages)
 pnpm validate:math        2818 cross-method checks passed
-pnpm build                Next.js 16 production build, 260 static pages
+pnpm build                Next.js 16 production build, 270 static pages
 pnpm test:e2e             20 passed (incl. axe WCAG 2.2 AA scans on 8 pages, 360 px layout, keyboard dragging)
 ```
 

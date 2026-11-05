@@ -29,7 +29,7 @@ content/*.json ──zod──► @mcc/curriculum ─┐
                                                        └─ lib/store.ts (localStorage, zod-validated)
 ```
 
-All curriculum pages are statically generated (260 pages). Learner state is client-only; `useSyncExternalStore` with a server snapshot avoids hydration mismatches.
+All curriculum pages are statically generated (270 pages). Learner state is client-only; `useSyncExternalStore` with a server snapshot avoids hydration mismatches.
 
 ## Persistence
 
