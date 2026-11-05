@@ -86,9 +86,9 @@ export const appliedTemplates: QuestionTemplate[] = [
     difficulty: 2,
     representation: "symbolic",
     generate(rng) {
-      const u = [rng.int(-5, 5), rng.int(-5, 5), rng.int(-5, 5)];
+      const u: number[] = [rng.int(-5, 5), rng.int(-5, 5), rng.int(-5, 5)];
       const v = [rng.int(-5, 5), rng.int(-5, 5), rng.int(-5, 5)];
-      if (u.every((x) => x === 0)) u[0] = 1;
+      if (!u.some((x) => x !== 0)) u[0] = 1;
       const d = linalg.dot(u, v);
       const vt = (w: number[]) => `${w[0]}\\mathbf i ${signed(w[1])}\\mathbf j ${signed(w[2])}\\mathbf k`.replace(/(^|[ -]|\+ )1\\mathbf/g, "$1\\mathbf");
       return {
