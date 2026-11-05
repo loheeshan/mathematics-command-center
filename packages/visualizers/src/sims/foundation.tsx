@@ -65,7 +65,7 @@ function Bar({ n, d, unit, label, color, y, width, x0 = 0, maxWholes }: { n: num
   const wholes = Math.max(1, Math.ceil(Math.abs(n) / d));
   const pw = width / unit;
   return (
-    <g aria-label={label}>
+    <g data-label={label}>
       {Array.from({ length: Math.min(maxWholes, wholes) }, (_, w) => (
         <rect key={`w${w}`} x={x0 + w * (width + 12)} y={y} width={width} height={34} fill="none" stroke="var(--muted)" strokeWidth={1.5} rx={4} />
       ))}
@@ -109,7 +109,7 @@ export function FractionKitchenSim({ preset }: SimProps) {
           {recut ? "Show original cuts" : `Re-cut to common denominator (${L})`}
         </button>
       </div>
-      <svg viewBox={`0 0 ${3 * (W + 12) + 20} 210`} className="h-auto w-full rounded-lg border border-line bg-bg" role="img" aria-label={`${n1}/${d1} ${sub ? "minus" : "plus"} ${n2}/${d2} equals ${total.toString()}`}>
+      <svg viewBox={`0 0 ${Math.min(3, Math.max(1, Math.ceil(n1 / d1), Math.ceil(n2 / d2), Math.ceil(Math.abs(total.toNumber())))) * (W + 12) + 160} 210`} className="h-auto w-full rounded-lg border border-line bg-bg" role="img" aria-label={`${n1}/${d1} ${sub ? "minus" : "plus"} ${n2}/${d2} equals ${total.toString()}`}>
         <text x={10} y={22} fill="var(--muted)" fontSize={13}>{`${n1}/${d1}${recut ? ` = ${n1 * (L / d1)}/${L}` : ""}`}</text>
         <Bar n={n1} d={d1} unit={unit1} label="first fraction" color="var(--accent)" y={30} width={W} x0={10} maxWholes={3} />
         <text x={10} y={92} fill="var(--muted)" fontSize={13}>{`${sub ? "−" : "+"} ${n2}/${d2}${recut ? ` = ${n2 * (L / d2)}/${L}` : ""}`}</text>

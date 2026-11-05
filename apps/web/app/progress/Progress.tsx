@@ -58,7 +58,7 @@ export function Progress() {
           </select>
         </label>
         <div className="mt-3 overflow-x-auto rounded-xl border border-line bg-card p-2">
-          <svg viewBox={`0 0 ${W} ${H}`} className="h-auto min-w-[700px] w-full" role="img" aria-label={`Prerequisites and next topics for ${topicById(focus)?.title}. A text version follows.`}>
+          <svg viewBox={`0 0 ${W} ${H}`} className="h-auto min-w-[700px] w-full" role="group" aria-label={`Prerequisites and next topics for ${topicById(focus)?.title}. A text version follows.`}>
             {edges.map(([a, b]) => { const [x1, y1] = pos.get(a)!; const [x2, y2] = pos.get(b)!; return <path key={`${a}-${b}`} d={`M ${x1 + 230} ${y1} C ${x1 + 270} ${y1}, ${x2 - 40} ${y2}, ${x2} ${y2}`} fill="none" stroke="var(--muted)" strokeOpacity={0.5} />; })}
             {[...pos.entries()].map(([id, [x, y]]) => {
               const st = state(id);

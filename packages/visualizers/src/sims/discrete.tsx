@@ -97,7 +97,7 @@ export function VennStudioSim({ preset }: SimProps) {
   return (
     <Panel>
       <Seg label="Operation" value={view} onChange={setView} options={[{ id: "union", label: "A ∪ B" }, { id: "inter", label: "A ∩ B" }, { id: "diff", label: "A − B" }, { id: "comp", label: "Aᶜ" }, { id: "sym", label: "A △ B" }]} />
-      <svg viewBox="0 0 500 300" className="h-auto w-full rounded-lg border border-line bg-bg" role="img" aria-label={`Venn diagram; ${sym.replace(/\\/g, "")} has ${result.length} elements`}>
+      <svg viewBox="0 0 500 300" className="h-auto w-full rounded-lg border border-line bg-bg" role="group" aria-label={`Venn diagram; ${sym.replace(/\\/g, "")} has ${result.length} elements`}>
         <defs>
           <clipPath id="vA"><circle cx={190} cy={150} r={110} /></clipPath>
           <clipPath id="vB"><circle cx={310} cy={150} r={110} /></clipPath>

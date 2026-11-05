@@ -14,7 +14,7 @@ export function Tex({ tex, display = false, className }: { tex: string; display?
 /** Inline formatting: $$display$$, $inline$, **bold**, `code`. Everything else is plain text (never HTML). */
 function inline(text: string, keyBase: string): ReactNode[] {
   const out: ReactNode[] = [];
-  const re = /(\$\$[^$]+\$\$|\$[^$\n]+\$|\*\*[^*]+\*\*|`[^`]+`)/g;
+  const re = /(\$\$[^$]+\$\$|\$[^$\n]+\$|\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`)/g;
   let last = 0;
   let m: RegExpExecArray | null;
   let i = 0;
@@ -25,6 +25,7 @@ function inline(text: string, keyBase: string): ReactNode[] {
     if (tok.startsWith("$$")) out.push(<Tex key={k} tex={tok.slice(2, -2)} display />);
     else if (tok.startsWith("$")) out.push(<Tex key={k} tex={tok.slice(1, -1)} />);
     else if (tok.startsWith("**")) out.push(<strong key={k} className="font-semibold text-fg">{inline(tok.slice(2, -2), k)}</strong>);
+    else if (tok.startsWith("*")) out.push(<em key={k}>{inline(tok.slice(1, -1), k)}</em>);
     else out.push(<code key={k} className="rounded bg-card-2 px-1 py-0.5 font-mono text-[0.9em]">{tok.slice(1, -1)}</code>);
     last = m.index + tok.length;
   }

@@ -16,14 +16,14 @@ export function LimitExplorerSim({ preset }: SimProps) {
   const [key, setKey] = useState(preset && LIMIT_PRESETS[preset] ? preset : "hole");
   const P = LIMIT_PRESETS[key];
   const [k, setK] = useState(1); // h = 10^-k
-  const h = 10 ** -k;
-  const rows = [1, 2, 3, 4, 5, 6].map((e) => [10 ** -e, P.f(P.a - 10 ** -e), P.f(P.a + 10 ** -e)]);
+  const h = Number(`1e-${k}`); // literal parse: 10 ** -k can differ in the last bit between JS engines
+  const rows = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6].map((hh) => [hh, P.f(P.a - hh), P.f(P.a + hh)]);
   const [x0, x1, y0, y1] = P.view;
   return (
     <Panel>
       <Seg label="Function" value={key} onChange={(v) => setKey(v)} options={Object.entries(LIMIT_PRESETS).map(([id, p]) => ({ id, label: p.label }))} />
       <p><TeX tex={`f(x) = ${P.tex},\\qquad x \\to ${P.a}`} /></p>
-      <Slider label="distance h from a" value={k} min={0} max={6} step={1} onChange={setK} format={(v) => `10^-${v} = ${fmt(10 ** -v)}`} />
+      <Slider label="distance h from a" value={k} min={0} max={6} step={1} onChange={setK} format={(v) => `10^-${v} = ${fmt(Number(`1e-${v}`))}`} />
       <Plot view={{ xmin: x0, xmax: x1, ymin: y0, ymax: y1 }} zoomable label={`Graph near x = ${P.a}`}>
         {(s) => (
           <g>

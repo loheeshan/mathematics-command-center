@@ -107,7 +107,7 @@ export function Plot({
       <svg
         ref={svgRef}
         viewBox={`0 0 ${W} ${H}`}
-        role="img"
+        role="group"
         aria-label={label}
         className="h-auto w-full touch-none select-none rounded-lg border border-line bg-bg"
         tabIndex={zoomable ? 0 : undefined}

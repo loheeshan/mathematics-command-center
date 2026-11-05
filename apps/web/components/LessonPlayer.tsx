@@ -191,7 +191,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[230px_minmax(0,1fr)_260px]">
-      <nav aria-label="Lesson stages" className="no-print lg:sticky lg:top-20 lg:self-start">
+      <nav aria-label="Lesson stages" className="no-print min-w-0 lg:sticky lg:top-20 lg:self-start">
         <ol className="flex gap-1 overflow-x-auto pb-2 lg:block lg:space-y-1 lg:overflow-visible">
           {stages.map((s, i) => {
             const done = completed.includes(s.id);
@@ -233,7 +233,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         </div>
       </article>
 
-      <aside className="space-y-4 no-print lg:sticky lg:top-20 lg:self-start" aria-label="Lesson tools">
+      <aside className="min-w-0 space-y-4 no-print lg:sticky lg:top-20 lg:self-start" aria-label="Lesson tools">
         {returnTo && (
           <div className="rounded-xl border border-accent bg-card p-3 text-sm">
             <p className="text-muted">You came here from</p>
