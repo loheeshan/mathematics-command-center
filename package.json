@@ -1,0 +1,29 @@
+{
+  "name": "mathematics-command-center",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @mcc/web dev",
+    "build": "pnpm --filter @mcc/web build",
+    "start": "pnpm --filter @mcc/web start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit && pnpm --filter @mcc/web typecheck",
+    "validate:curriculum": "tsx scripts/validate-curriculum/validate.ts",
+    "validate:math": "tsx scripts/validate-math/validate.ts",
+    "e2e": "playwright test",
+    "check": "pnpm typecheck && pnpm test && pnpm validate:curriculum && pnpm validate:math && pnpm build"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}
