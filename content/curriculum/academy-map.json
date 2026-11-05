@@ -1,0 +1,365 @@
+{
+  "$comment": "Academy Path: maps the 33 uploaded lecture PDFs, in their original order, to page ranges and canonical Master Core skill ids. Page ranges come from the audit (per-page text + visual rendering of image-only pages). objectivesSource='stated' means the PDF lists learning outcomes on the given page; 'derived' means MCC summarised the section headings in original words. Labs, lessons and practice are resolved from the skill ids at runtime, so status always reflects what is actually built.",
+  "university": "IIT Sri Lanka — AI & DS Mathematics",
+  "semesters": [
+    { "id": "fy-s1", "label": "First Year · Semester 1", "course": "CM1606 Computational Mathematics", "dir": "First Year Sem 1" },
+    { "id": "fy-s2", "label": "First Year · Semester 2", "course": "CM1606 Computational Mathematics (Probability & Statistics)", "dir": "First Year Sem 2" },
+    { "id": "sy-s1", "label": "Second Year · Semester 1", "course": "CM2607 Advanced Mathematics for Data Science", "dir": "Second Year Sem 1" }
+  ],
+  "chapters": [
+    { "id": "fy-s1-01", "semesterId": "fy-s1", "order": 1, "chapter": "01", "title": "Introduction to Real Numbers",
+      "file": "Chapter 01_Introduction to Real Numbers_annotated.pdf", "objectivesSource": "derived",
+      "objectives": ["Classify numbers as natural, whole, integer, rational, irrational or real", "Show that a recurring decimal is rational", "Write and read intervals on the real line", "Use the absolute value function"],
+      "foundations": ["number-line", "negative-numbers", "fractions-meaning", "decimals", "recurring-decimals", "inequalities-absolute"],
+      "topics": [
+        { "id": "number-sets", "title": "ℕ, whole numbers, ℤ and ℚ", "pages": [1, 1], "skills": ["number-systems"] },
+        { "id": "decimals-rational", "title": "Decimals; showing 12.3454545… is rational", "pages": [2, 2], "skills": ["recurring-decimals", "number-systems"] },
+        { "id": "irrationals-reals", "title": "Irrational and real numbers", "pages": [2, 3], "skills": ["number-systems"] },
+        { "id": "intervals", "title": "Intervals on the real line", "pages": [3, 4], "skills": ["number-systems", "inequalities-absolute"] },
+        { "id": "absolute-value", "title": "The absolute value function", "pages": [5, 5], "skills": ["inequalities-absolute"] }
+      ]},
+    { "id": "fy-s1-02", "semesterId": "fy-s1", "order": 2, "chapter": "02", "title": "Set Theory",
+      "file": "Chapter 02_Set Theory_annotated.pdf", "objectivesSource": "stated", "objectivesPage": 2,
+      "objectives": ["Identify the set-theoretical approach suited to situations dealing with different types or degrees of data (LO1, CM1606)"],
+      "foundations": ["math-notation", "number-line"],
+      "topics": [
+        { "id": "terminology", "title": "Terminology, notation, membership", "pages": [4, 8], "skills": ["sets"] },
+        { "id": "subsets-powerset", "title": "Subsets and the power set", "pages": [9, 11], "skills": ["sets"] },
+        { "id": "operations", "title": "Union, intersection, disjoint sets, complement, difference", "pages": [12, 17], "skills": ["sets"] },
+        { "id": "laws", "title": "Laws of set theory", "pages": [18, 19], "skills": ["sets"] },
+        { "id": "cartesian", "title": "Cartesian product", "pages": [20, 20], "skills": ["cartesian-product"] },
+        { "id": "intervals-exercises", "title": "Intervals in set-builder notation; exercises", "pages": [21, 23], "skills": ["number-systems", "sets"] }
+      ]},
+    { "id": "fy-s1-03", "semesterId": "fy-s1", "order": 3, "chapter": "03", "title": "Mathematical Logic and Methods of Proof",
+      "file": "Chapter 03_Mathematical Logic and Methods of Proof_annotated.pdf", "objectivesSource": "derived",
+      "objectives": ["Recognise statements and open sentences", "Build truth tables for ∧, ∨, ∼, ⇒, ⇔", "Form converse, inverse and contrapositive", "Use logical laws and quantifier negation", "Write direct, contrapositive, contradiction and induction proofs; disprove by counterexample"],
+      "foundations": ["math-notation", "sets"],
+      "topics": [
+        { "id": "statements", "title": "Statements and open sentences P(x)", "pages": [1, 3], "skills": ["propositional-logic"] },
+        { "id": "connectives", "title": "And, or, not; truth tables", "pages": [4, 6], "skills": ["propositional-logic"] },
+        { "id": "conditional", "title": "Conditional and biconditional statements", "pages": [7, 10], "skills": ["propositional-logic"] },
+        { "id": "converse", "title": "Converse, inverse, contrapositive", "pages": [11, 12], "skills": ["propositional-logic"] },
+        { "id": "equivalence", "title": "Logical equivalence, tautology, contradiction, laws", "pages": [13, 15], "skills": ["propositional-logic"] },
+        { "id": "quantifiers", "title": "Quantifiers and their negation", "pages": [16, 17], "skills": ["quantifiers"] },
+        { "id": "proofs", "title": "Direct proof, contrapositive, contradiction, counterexample", "pages": [18, 21], "skills": ["proof-methods"] },
+        { "id": "induction", "title": "Mathematical induction", "pages": [22, 23], "skills": ["induction"] }
+      ]},
+    { "id": "fy-s1-04a", "semesterId": "fy-s1", "order": 4, "chapter": "04", "title": "Relations & Functions — Part 01",
+      "file": "Chapter 04_Relations  Functions_Part 01_annotated.pdf", "objectivesSource": "stated", "objectivesPage": 2,
+      "objectives": ["Recall Cartesian product and discuss ordered pairs", "Identify relations and inverse relations", "Describe composition of relations", "Explain types of relations"],
+      "foundations": ["sets", "coordinate-plane"],
+      "topics": [
+        { "id": "cartesian-ordered-pairs", "title": "Cartesian product and ordered pairs", "pages": [4, 6], "skills": ["cartesian-product"] },
+        { "id": "relations", "title": "Relations, relation on a set, domain and range", "pages": [7, 10], "skills": ["relations"] },
+        { "id": "inverse-composition", "title": "Inverse and composition of relations", "pages": [11, 14], "skills": ["relations"] },
+        { "id": "types", "title": "Reflexive, symmetric, transitive, equivalence relations (handwritten examples)", "pages": [15, 21], "skills": ["relations"] }
+      ]},
+    { "id": "fy-s1-04b", "semesterId": "fy-s1", "order": 5, "chapter": "04", "title": "Relations & Functions — Part 02",
+      "file": "Chapter 04_Relations  Functions_Part 02_annotated.pdf", "objectivesSource": "stated", "objectivesPage": 2,
+      "objectives": ["Identify the rule of a function", "Determine domain, codomain and range", "Identify single-valued functions", "Construct compositions of functions", "Construct the inverse of a function", "Recognise special features of several types of functions", "Critical value analysis for quadratic functions"],
+      "foundations": ["coordinate-plane", "slope-intercept", "substitution", "quadratics"],
+      "topics": [
+        { "id": "components", "title": "Components of a function; notation", "pages": [4, 6], "skills": ["functions-notation"] },
+        { "id": "range-graph", "title": "Range and graph of a function", "pages": [7, 10], "skills": ["functions-notation"] },
+        { "id": "vertical-line", "title": "Vertical line test", "pages": [11, 11], "skills": ["functions-notation"] },
+        { "id": "algebra-composition", "title": "Adding functions; composition", "pages": [12, 17], "skills": ["composition-inverse"] },
+        { "id": "inverse", "title": "Inverse functions and their graphs", "pages": [18, 26], "skills": ["composition-inverse"] },
+        { "id": "families", "title": "Polynomial, exponential, logarithmic, logistic functions", "pages": [27, 31], "skills": ["function-families", "exponentials-logs"] },
+        { "id": "quadratic-critical", "title": "Critical values of quadratic functions", "pages": [32, 33], "skills": ["quadratics"] }
+      ]},
+    { "id": "fy-s1-05", "semesterId": "fy-s1", "order": 6, "chapter": "05", "title": "Permutations and Combinations",
+      "file": "Chapter 05_Permutations and Combinations_annotated.pdf", "objectivesSource": "derived",
+      "objectives": ["Count orderings with n!", "Count arrangements of n objects taken r at a time", "Count selections with combinations", "Apply counting to equally likely probability"],
+      "foundations": ["four-operations", "fraction-mul-div"],
+      "topics": [
+        { "id": "intro-probability", "title": "Equally likely outcomes and counting", "pages": [1, 1], "skills": ["factorial-permutations"] },
+        { "id": "permutations", "title": "Permutations, n! and nPr", "pages": [2, 3], "skills": ["factorial-permutations"] },
+        { "id": "combinations", "title": "Combinations and applied problems (Morse code etc.)", "pages": [3, 5], "skills": ["combinations"] }
+      ]},
+    { "id": "fy-s1-06a", "semesterId": "fy-s1", "order": 7, "chapter": "06A", "title": "Trigonometry",
+      "file": "Chapter 06A_Trigonometry_annotted.pdf", "objectivesSource": "derived",
+      "objectives": ["Convert between degrees and radians", "Find exact trig values and use quadrant rules", "Use reciprocal ratios", "Graph trig functions", "Apply identities (compound and double angle)", "Use inverse trig functions on their principal domains"],
+      "foundations": ["angles-triangles", "pythagoras", "fraction-mul-div", "coordinate-plane"],
+      "topics": [
+        { "id": "radians", "title": "Radian measure and conversion", "pages": [1, 2], "skills": ["radians"] },
+        { "id": "exact-quadrants", "title": "Exact values and quadrant rules", "pages": [3, 4], "skills": ["trig-ratios"] },
+        { "id": "reciprocal", "title": "Reciprocal ratios", "pages": [5, 5], "skills": ["trig-ratios"] },
+        { "id": "graphs", "title": "Graphing trigonometric functions", "pages": [6, 6], "skills": ["trig-graphs"] },
+        { "id": "identities", "title": "Identities, compound and double angles", "pages": [7, 10], "skills": ["trig-identities"] },
+        { "id": "inverse", "title": "Inverse sine, cosine, tangent", "pages": [11, 15], "skills": ["inverse-trig"] }
+      ]},
+    { "id": "fy-s1-06b", "semesterId": "fy-s1", "order": 8, "chapter": "06B", "title": "Modular Arithmetic",
+      "file": "Chapter 06B_Modular Arithmetic_annotated.pdf", "objectivesSource": "derived",
+      "objectives": ["Use the division algorithm", "Define and test congruence modulo m", "Use congruence as an equivalence relation", "Apply addition, subtraction, multiplication and power theorems", "Solve linear congruences and remainder problems"],
+      "foundations": ["four-operations", "factors-multiples", "relations"],
+      "topics": [
+        { "id": "division", "title": "Division: dividend, divisor, quotient, remainder", "pages": [2, 2], "skills": ["modular-arithmetic"] },
+        { "id": "congruence", "title": "Congruence modulo m; equivalence relation", "pages": [3, 5], "skills": ["modular-arithmetic", "relations"] },
+        { "id": "theorems", "title": "Theorems 6.1 and 6.2 with proofs (handwritten)", "pages": [6, 12], "skills": ["modular-arithmetic"] },
+        { "id": "examples", "title": "Remainder examples; solving 7x ≡ 11 (mod 17)", "pages": [13, 19], "skills": ["modular-arithmetic"] },
+        { "id": "applications", "title": "Divisibility tests and last digits", "pages": [20, 23], "skills": ["modular-arithmetic"] }
+      ]},
+    { "id": "fy-s1-07a", "semesterId": "fy-s1", "order": 9, "chapter": "07A", "title": "Limits",
+      "file": "Chapter 07A_Limits_annotated.pdf", "objectivesSource": "derived",
+      "objectives": ["State the meaning of lim f(x) = L", "Evaluate one-sided limits from graphs", "Apply limit laws", "Find limits at infinity and infinite limits", "Handle indeterminate forms and rational functions at infinity"],
+      "foundations": ["functions-notation", "fraction-add-sub", "coordinate-plane", "expansion-factorisation", "rational-expressions"],
+      "topics": [
+        { "id": "concept", "title": "The concept of a limit", "pages": [1, 3], "skills": ["limits"] },
+        { "id": "one-sided", "title": "One-sided limits", "pages": [4, 5], "skills": ["limits"] },
+        { "id": "laws", "title": "Limit laws", "pages": [6, 7], "skills": ["limits"] },
+        { "id": "infinity", "title": "Limits at infinity; infinite limits", "pages": [8, 13], "skills": ["limits", "piecewise-asymptotes"] },
+        { "id": "indeterminate", "title": "Indeterminate forms; rational functions at infinity", "pages": [14, 17], "skills": ["limits"] }
+      ]},
+    { "id": "fy-s1-07b", "semesterId": "fy-s1", "order": 10, "chapter": "07B", "title": "Differentiation",
+      "file": "Chapter 07B_Differentiation (1).pdf", "objectivesSource": "derived",
+      "objectives": ["Define the derivative as a limit of difference quotients", "Decide differentiability at a point and on a set", "Use basic derivatives", "Apply sum, product, quotient and chain rules"],
+      "foundations": ["slope-intercept", "limits", "exponents-roots", "trig-ratios"],
+      "topics": [
+        { "id": "definition", "title": "Derivative definition; differentiability", "pages": [2, 4], "skills": ["derivative-definition"] },
+        { "id": "basic", "title": "Basic derivatives", "pages": [5, 5], "skills": ["differentiation-rules"] },
+        { "id": "rules", "title": "Rules including the chain rule; exercises", "pages": [6, 12], "skills": ["differentiation-rules"] }
+      ]},
+    { "id": "fy-s1-07c", "semesterId": "fy-s1", "order": 11, "chapter": "07C", "title": "Integration",
+      "file": "Chapter 07C_Integration.pdf", "objectivesSource": "derived",
+      "objectives": ["Define antiderivatives and indefinite integrals", "Use linearity and fundamental integrals", "Integrate standard expressions with linear arguments", "Evaluate definite integrals"],
+      "foundations": ["differentiation-rules", "area-perimeter-volume", "fraction-add-sub"],
+      "topics": [
+        { "id": "antiderivative", "title": "Antiderivatives and linearity", "pages": [2, 4], "skills": ["antiderivatives"] },
+        { "id": "fundamental", "title": "Fundamental integrals", "pages": [5, 7], "skills": ["antiderivatives"] },
+        { "id": "linear-argument", "title": "Standard expressions with (ax + b)", "pages": [8, 9], "skills": ["antiderivatives"] },
+        { "id": "definite", "title": "Definite integrals", "pages": [10, 11], "skills": ["definite-integrals"] }
+      ]},
+    { "id": "fy-s1-08a", "semesterId": "fy-s1", "order": 12, "chapter": "08A", "title": "Introduction to Matrices",
+      "file": "Chapter 08A_Introduction to Matrices_annotated.pdf", "objectivesSource": "derived",
+      "objectives": ["Use matrix notation and order", "Recognise matrix types", "Add, subtract and scalar-multiply", "Transpose; recognise symmetric matrices", "Use matrix equality", "Multiply matrices when orders allow"],
+      "foundations": ["four-operations", "negative-numbers", "linear-systems"],
+      "topics": [
+        { "id": "notation", "title": "What is a matrix; notation; order", "pages": [2, 4], "skills": ["matrices"] },
+        { "id": "types", "title": "Types of matrices", "pages": [5, 14], "skills": ["matrices"] },
+        { "id": "add-scalar", "title": "Addition, subtraction, scalar multiplication", "pages": [15, 19], "skills": ["matrices"] },
+        { "id": "transpose", "title": "Transpose and symmetric matrices", "pages": [20, 26], "skills": ["matrices"] },
+        { "id": "equality", "title": "Matrix equality", "pages": [27, 29], "skills": ["matrices"] },
+        { "id": "multiplication", "title": "Matrix multiplication", "pages": [30, 37], "skills": ["matrices", "matrix-transformations"] }
+      ]},
+    { "id": "fy-s1-08b", "semesterId": "fy-s1", "order": 13, "chapter": "08B", "title": "Determinants",
+      "file": "Chapter 08B_Determinants.pdf", "objectivesSource": "derived",
+      "objectives": ["Compute 1×1, 2×2 and 3×3 determinants", "Find minors and cofactors", "Find inverses via the adjugate when |A| ≠ 0", "Solve a 3×3 linear system with X = A⁻¹b"],
+      "foundations": ["matrices", "negative-numbers", "fraction-mul-div"],
+      "topics": [
+        { "id": "small", "title": "Determinants of 1×1 and 2×2 matrices (handwritten)", "pages": [1, 1], "skills": ["determinants"] },
+        { "id": "three", "title": "3×3 expansion; worked |B| = −80 (handwritten)", "pages": [2, 2], "skills": ["determinants"] },
+        { "id": "minors-cofactors", "title": "Minors and cofactors (handwritten)", "pages": [3, 6], "skills": ["determinants"] },
+        { "id": "inverse", "title": "Inverse: AB = BA = I, |A| ≠ 0, adjugate (handwritten)", "pages": [7, 9], "skills": ["matrix-inverse"] },
+        { "id": "systems", "title": "Solving a system with A⁻¹b (handwritten)", "pages": [10, 11], "skills": ["matrix-inverse", "linear-systems"] }
+      ]},
+    { "id": "fy-s1-08c", "semesterId": "fy-s1", "order": 14, "chapter": "08C", "title": "Vectors",
+      "file": "Chapter 08C_Vectors_annotated.pdf", "objectivesSource": "derived",
+      "objectives": ["Distinguish scalars and vectors", "Add vectors by triangle and parallelogram laws", "Use i, j, k components in 2D and 3D", "Compute dot and cross products and angles", "Find direction cosines"],
+      "foundations": ["coordinate-plane", "pythagoras", "trig-ratios", "determinants"],
+      "topics": [
+        { "id": "basics", "title": "Scalars, vectors, representation and properties", "pages": [2, 6], "skills": ["vectors"] },
+        { "id": "addition", "title": "Triangle and parallelogram laws", "pages": [7, 10], "skills": ["vectors"] },
+        { "id": "components", "title": "Components; 3D vectors", "pages": [11, 15], "skills": ["vectors"] },
+        { "id": "dot", "title": "Scalar (dot) product", "pages": [16, 24], "skills": ["dot-cross-product"] },
+        { "id": "cross", "title": "Vector (cross) product and the determinant form", "pages": [25, 32], "skills": ["dot-cross-product", "determinants"] },
+        { "id": "direction-cosines", "title": "Direction cosines", "pages": [33, 33], "skills": ["dot-cross-product"] }
+      ]},
+
+    { "id": "fy-s2-00", "semesterId": "fy-s2", "order": 1, "chapter": "00", "title": "Introduction to R and RStudio",
+      "file": "Chapter 00 Introduction to R and RStudio.pdf", "objectivesSource": "stated", "objectivesPage": 2,
+      "objectives": ["Grasp the A-B-C of R", "Use RStudio for basic statistical applications"],
+      "foundations": ["calculator-literacy", "reading-tables"],
+      "topics": [
+        { "id": "install", "title": "Installing R and RStudio", "pages": [3, 4], "skills": ["r-python-data"] },
+        { "id": "rstudio", "title": "The RStudio interface; specific commands", "pages": [5, 6], "skills": ["r-python-data"] }
+      ]},
+    { "id": "fy-s2-01a", "semesterId": "fy-s2", "order": 2, "chapter": "01", "title": "Introduction to Data Analysis — Part 01",
+      "file": "Chapter 01 Introduction to Data Analysis part 01.pdf", "objectivesSource": "stated", "objectivesPage": 2,
+      "objectives": ["Demonstrate knowledge of statistics related to data analysis", "Use R for basic statistical calculations"],
+      "foundations": ["fraction-add-sub", "decimals", "reading-tables", "exponents-roots"],
+      "topics": [
+        { "id": "eda", "title": "Exploratory data analysis; data sources", "pages": [3, 4], "skills": ["data-types"] },
+        { "id": "types", "title": "Data types; rectangular and non-rectangular data", "pages": [5, 10], "skills": ["data-types"] },
+        { "id": "location", "title": "Measures of location: mean, weighted mean, median, mode, robustness", "pages": [11, 13], "skills": ["central-tendency"] },
+        { "id": "variability", "title": "Measures of variability: variance, SD, MAD", "pages": [14, 16], "skills": ["variability"] }
+      ]},
+    { "id": "fy-s2-01b", "semesterId": "fy-s2", "order": 3, "chapter": "01", "title": "Introduction to Data Analysis — Part 02",
+      "file": "Chapter 01 Introduction to Data Analysis part 02.pdf", "objectivesSource": "derived",
+      "objectives": ["Read boxplots and five-number summaries", "Build frequency tables, histograms and density plots", "Compute and interpret Pearson and Spearman correlation", "Explore two variables with scatterplots and contingency tables"],
+      "foundations": ["central-tendency", "variability", "coordinate-plane"],
+      "topics": [
+        { "id": "boxplot", "title": "Boxplots", "pages": [2, 2], "skills": ["data-visualisation"] },
+        { "id": "histogram-density", "title": "Frequency tables, histograms, density, mode", "pages": [3, 5], "skills": ["data-visualisation", "central-tendency"] },
+        { "id": "correlation", "title": "Pearson's r and Spearman's rank correlation", "pages": [6, 8], "skills": ["correlation"] },
+        { "id": "two-variables", "title": "Scatterplots and contingency tables", "pages": [9, 10], "skills": ["data-visualisation", "correlation"] }
+      ]},
+    { "id": "fy-s2-02", "semesterId": "fy-s2", "order": 4, "chapter": "02", "title": "Probability Theory",
+      "file": "Chapter 02 Probability Theory.pdf", "objectivesSource": "derived",
+      "objectives": ["Define experiments, sample spaces and events", "Compute equally likely and experimental probabilities", "Use complements, unions, intersections and the addition rule", "Use conditional probability, multiplication rule and independence", "Apply total probability and Bayes' theorem"],
+      "foundations": ["sets", "fraction-add-sub", "combinations", "percentages"],
+      "topics": [
+        { "id": "definitions", "title": "Key definitions; sample spaces", "pages": [2, 2], "skills": ["probability-basics"] },
+        { "id": "events", "title": "Events; experimental probability; complements", "pages": [3, 4], "skills": ["probability-basics"] },
+        { "id": "union-addition", "title": "Intersections, unions, addition rule", "pages": [5, 6], "skills": ["probability-basics", "sets"] },
+        { "id": "conditional", "title": "Conditional probability, multiplication rule, independence", "pages": [7, 9], "skills": ["conditional-probability"] },
+        { "id": "bayes", "title": "Total probability and Bayes' theorem", "pages": [10, 11], "skills": ["bayes"] }
+      ]},
+    { "id": "fy-s2-03", "semesterId": "fy-s2", "order": 5, "chapter": "03", "title": "Distribution of Random Variables",
+      "file": "Chapter 03 Distribution of Random Variables.pdf", "objectivesSource": "derived",
+      "objectives": ["Define random variables, domain and range space", "Distinguish discrete and continuous random variables", "Use probability mass and density functions", "Use the distribution function F(x)"],
+      "foundations": ["probability-basics", "functions-notation", "definite-integrals"],
+      "topics": [
+        { "id": "rv", "title": "Random variables; sum of two dice", "pages": [1, 2], "skills": ["random-variables"] },
+        { "id": "discrete-continuous", "title": "Discrete vs continuous", "pages": [3, 4], "skills": ["random-variables"] },
+        { "id": "pmf", "title": "Probability mass functions", "pages": [5, 6], "skills": ["random-variables"] },
+        { "id": "pdf-cdf", "title": "Probability density functions; distribution function", "pages": [7, 8], "skills": ["random-variables", "definite-integrals"] }
+      ]},
+    { "id": "fy-s2-04", "semesterId": "fy-s2", "order": 6, "chapter": "04", "title": "Mathematical Expectation",
+      "file": "Chapter 04 Mathematical expectation.pdf", "objectivesSource": "derived",
+      "objectives": ["Compute expectations of discrete and continuous random variables", "Compute E[g(X)] and use expectation properties", "Compute variance and standard deviation, including the computational formula"],
+      "foundations": ["random-variables", "central-tendency", "definite-integrals"],
+      "topics": [
+        { "id": "expectation", "title": "Expectation: discrete and continuous", "pages": [1, 2], "skills": ["expectation-variance"] },
+        { "id": "functions", "title": "Expectation of a function; properties", "pages": [2, 2], "skills": ["expectation-variance"] },
+        { "id": "variance", "title": "Variance and standard deviation; die example", "pages": [3, 4], "skills": ["expectation-variance"] }
+      ]},
+    { "id": "fy-s2-05", "semesterId": "fy-s2", "order": 7, "chapter": "05", "title": "Standard Discrete Distributions",
+      "file": "Chapter 05 Standard discrete distributions.pdf", "objectivesSource": "derived",
+      "objectives": ["Use discrete uniform and Bernoulli distributions", "Derive and apply the binomial distribution", "Apply the Poisson distribution and its binomial approximation"],
+      "foundations": ["combinations", "expectation-variance", "exponentials-logs"],
+      "topics": [
+        { "id": "uniform", "title": "Discrete uniform", "pages": [1, 2], "skills": ["discrete-distributions"] },
+        { "id": "bernoulli", "title": "Bernoulli distribution and trials", "pages": [2, 3], "skills": ["discrete-distributions"] },
+        { "id": "binomial", "title": "Binomial: derivation, properties, examples", "pages": [3, 6], "skills": ["discrete-distributions"] },
+        { "id": "poisson", "title": "Poisson: derivation, properties, queuing, binomial link", "pages": [7, 10], "skills": ["discrete-distributions"] }
+      ]},
+    { "id": "fy-s2-06", "semesterId": "fy-s2", "order": 8, "chapter": "06", "title": "Standard Continuous Distributions",
+      "file": "Chapter 06 Standard continuous distributions.pdf", "objectivesSource": "derived",
+      "objectives": ["Use the continuous uniform distribution", "Compute normal and standard normal probabilities (pnorm)", "Approximate binomial probabilities with a continuity correction", "Use the exponential distribution and its Poisson link"],
+      "foundations": ["definite-integrals", "random-variables", "exponentials-logs", "area-perimeter-volume"],
+      "topics": [
+        { "id": "uniform", "title": "Continuous uniform", "pages": [1, 2], "skills": ["continuous-distributions"] },
+        { "id": "normal", "title": "Normal distribution: definition and properties", "pages": [3, 4], "skills": ["continuous-distributions"] },
+        { "id": "standard-normal", "title": "Standard normal; determining probabilities", "pages": [5, 8], "skills": ["continuous-distributions"] },
+        { "id": "approximation", "title": "Normal approximation to the binomial", "pages": [8, 11], "skills": ["continuous-distributions", "discrete-distributions"] },
+        { "id": "exponential", "title": "Exponential distribution; relationship to Poisson", "pages": [12, 16], "skills": ["continuous-distributions"] }
+      ]},
+    { "id": "fy-s2-07", "semesterId": "fy-s2", "order": 9, "chapter": "07", "title": "Inferential Statistics",
+      "file": "Chapter 07 Inferential Statistics.pdf", "objectivesSource": "derived",
+      "objectives": ["Define point estimators and unbiasedness", "Build and interpret confidence intervals for μ", "Distinguish prediction intervals", "Set up hypotheses; reason about Type I/II errors and critical regions", "Run one-sample z tests (two-, right- and left-tailed)"],
+      "foundations": ["continuous-distributions", "sampling-clt", "variability"],
+      "topics": [
+        { "id": "point", "title": "Point estimation; unbiased estimators", "pages": [1, 2], "skills": ["confidence-intervals"] },
+        { "id": "ci", "title": "Interval estimation; CI for μ; margin of error", "pages": [2, 5], "skills": ["confidence-intervals", "sampling-clt"] },
+        { "id": "prediction", "title": "Prediction intervals", "pages": [5, 5], "skills": ["confidence-intervals"] },
+        { "id": "testing", "title": "Hypothesis testing; types of error", "pages": [6, 7], "skills": ["hypothesis-testing"] },
+        { "id": "regions", "title": "Critical regions; two- and one-tailed tests; z test", "pages": [8, 9], "skills": ["hypothesis-testing"] }
+      ]},
+    { "id": "fy-s2-08", "semesterId": "fy-s2", "order": 10, "chapter": "08", "title": "Regression Analysis",
+      "file": "Chapter 08 Regression Analysis.pdf", "objectivesSource": "derived",
+      "objectives": ["Fit and interpret simple linear regression (cars data in R)", "State model assumptions and read diagnostics", "Interpret R² and predictions", "Introduce multiple regression and ANOVA output", "Recognise advanced regression ideas"],
+      "foundations": ["slope-intercept", "correlation", "variability"],
+      "topics": [
+        { "id": "slr", "title": "Simple linear regression; Example 8.1", "pages": [1, 3], "skills": ["linear-regression", "correlation"] },
+        { "id": "assumptions", "title": "Assumptions and fitted model", "pages": [4, 6], "skills": ["linear-regression"] },
+        { "id": "r2-diagnostics", "title": "R², residuals vs fitted", "pages": [7, 8], "skills": ["linear-regression"] },
+        { "id": "mlr", "title": "Multiple linear regression; ANOVA table", "pages": [9, 10], "skills": ["linear-regression"] },
+        { "id": "advanced", "title": "Further research: advanced regression", "pages": [10, 11], "skills": ["linear-regression"] }
+      ]},
+
+    { "id": "sy-s1-01", "semesterId": "sy-s1", "order": 1, "chapter": "01", "title": "Differentiation",
+      "file": "Chapter 01_Differentiation.pdf", "objectivesSource": "derived",
+      "objectives": ["Differentiate implicit functions (folium of Descartes etc.)", "Compute higher-order derivatives", "Find and classify stationary points; optimise on intervals", "Use convexity, concavity and inflection points", "Apply L'Hôpital's rule to indeterminate forms"],
+      "foundations": ["derivative-definition", "differentiation-rules", "slope-intercept"],
+      "topics": [
+        { "id": "recap", "title": "Recap of the derivative", "pages": [2, 2], "skills": ["derivative-definition"] },
+        { "id": "implicit", "title": "Implicit functions and their differentiation", "pages": [3, 8], "skills": ["implicit-differentiation"] },
+        { "id": "higher-stationary", "title": "Higher derivatives, stationary points, optimisation", "pages": [9, 16], "skills": ["higher-derivatives-optimisation"] },
+        { "id": "convexity", "title": "Convexity, concavity, points of inflection", "pages": [17, 22], "skills": ["higher-derivatives-optimisation"] },
+        { "id": "lhopital", "title": "L'Hôpital's rule", "pages": [23, 29], "skills": ["lhopital"] }
+      ]},
+    { "id": "sy-s1-02", "semesterId": "sy-s1", "order": 2, "chapter": "02", "title": "Partial Differentiation",
+      "file": "Chapter 02_Partial_Differentiation.pdf", "objectivesSource": "derived",
+      "objectives": ["Describe functions of several variables", "Test limits and continuity in two variables", "Compute first and higher partial derivatives", "Classify maxima, minima and saddle points", "Form the Hessian and its determinant"],
+      "foundations": ["differentiation-rules", "coordinate-plane", "determinants"],
+      "topics": [
+        { "id": "several-variables", "title": "Functions of several variables", "pages": [1, 1], "skills": ["multivariable-functions"] },
+        { "id": "limits", "title": "Limits and continuity", "pages": [2, 3], "skills": ["multivariable-functions"] },
+        { "id": "partials", "title": "Partial derivatives; higher orders", "pages": [4, 6], "skills": ["partial-derivatives"] },
+        { "id": "extrema", "title": "Maxima, minima and saddle points", "pages": [6, 8], "skills": ["hessian-extrema"] },
+        { "id": "hessian", "title": "The Hessian matrix", "pages": [8, 9], "skills": ["hessian-extrema"] }
+      ]},
+    { "id": "sy-s1-03a", "semesterId": "sy-s1", "order": 3, "chapter": "03A", "title": "Integration (A)",
+      "file": "Chapter 03A_Integration.pdf", "objectivesSource": "derived",
+      "objectives": ["Recall antiderivatives and fundamental integrals", "Integrate by derivative substitution", "Integrate powers of trig/hyperbolic functions", "Use partial fractions", "Use trig/hyperbolic substitutions", "Integrate by parts"],
+      "foundations": ["antiderivatives", "differentiation-rules", "trig-identities", "rational-expressions"],
+      "topics": [
+        { "id": "fundamental", "title": "Antidifferentiation and fundamental integrals", "pages": [2, 6], "skills": ["antiderivatives"] },
+        { "id": "linear-arg", "title": "Linear-argument integrals", "pages": [7, 8], "skills": ["antiderivatives"] },
+        { "id": "substitution", "title": "Derivative substitution", "pages": [9, 10], "skills": ["integration-techniques"] },
+        { "id": "trig-powers", "title": "Products of powers of trig functions", "pages": [11, 13], "skills": ["integration-techniques"] },
+        { "id": "partial-fractions", "title": "Rational functions and partial fractions", "pages": [14, 18], "skills": ["integration-techniques"] },
+        { "id": "trig-sub", "title": "Trigonometric and hyperbolic substitutions", "pages": [19, 21], "skills": ["integration-techniques"] },
+        { "id": "parts", "title": "Integration by parts", "pages": [22, 27], "skills": ["integration-techniques"] }
+      ]},
+    { "id": "sy-s1-03b", "semesterId": "sy-s1", "order": 4, "chapter": "03B", "title": "Integration (B)",
+      "file": "Chapter 03B_Integration.pdf", "objectivesSource": "derived",
+      "objectives": ["Interpret double integrals as summation in two directions", "Evaluate double integrals, including polar form", "Find areas of plane figures and polar regions", "Evaluate triple integrals and volumes", "Normalise joint probability density functions"],
+      "foundations": ["definite-integrals", "multivariable-functions", "area-perimeter-volume"],
+      "topics": [
+        { "id": "summation", "title": "Multiple integrals as summation", "pages": [2, 5], "skills": ["multiple-integrals"] },
+        { "id": "double", "title": "Double integrals; examples", "pages": [6, 8], "skills": ["multiple-integrals"] },
+        { "id": "areas", "title": "Areas of plane figures and polar curves", "pages": [9, 15], "skills": ["multiple-integrals"] },
+        { "id": "triple", "title": "Triple integrals and volume", "pages": [16, 23], "skills": ["multiple-integrals"] },
+        { "id": "pdf", "title": "Probability density functions", "pages": [24, 24], "skills": ["multiple-integrals", "random-variables"] }
+      ]},
+    { "id": "sy-s1-04a", "semesterId": "sy-s1", "order": 5, "chapter": "04A", "title": "Differential Equations (A)",
+      "file": "Chapter 04A_Differential Equations.pdf", "objectivesSource": "derived",
+      "objectives": ["Recognise differential equations", "Solve dy/dx = f(x) by integration; general vs particular solutions", "Solve first-order equations by separation of variables"],
+      "foundations": ["antiderivatives", "rearranging-formulae", "exponentials-logs"],
+      "topics": [
+        { "id": "intro", "title": "What is a differential equation", "pages": [1, 1], "skills": ["ode-intro"] },
+        { "id": "general-particular", "title": "General and particular solutions", "pages": [1, 3], "skills": ["ode-intro"] },
+        { "id": "separation", "title": "Separation of variables; Exercise 4.1 (later pages handwritten)", "pages": [2, 6], "skills": ["ode-intro"] }
+      ]},
+    { "id": "sy-s1-04b", "semesterId": "sy-s1", "order": 6, "chapter": "04B", "title": "Differential Equations (B)",
+      "file": "Chapter 04B_Differential Equations.pdf", "objectivesSource": "derived",
+      "objectives": ["Recognise partial differential equations", "Solve simple PDEs by direct integration with boundary conditions"],
+      "foundations": ["partial-derivatives", "ode-intro"],
+      "topics": [
+        { "id": "pde", "title": "PDEs by direct integration", "pages": [1, 1], "skills": ["pde-intro"] },
+        { "id": "exercise", "title": "Exercise 4.3 (page is mostly handwritten/blank)", "pages": [2, 2], "skills": ["pde-intro"] }
+      ]},
+    { "id": "sy-s1-05", "semesterId": "sy-s1", "order": 7, "chapter": "05", "title": "Sequences and Series",
+      "file": "Chapter 05_Sequences and Series.pdf", "objectivesSource": "derived",
+      "objectives": ["Define sequences and their limits", "Test boundedness and monotonicity", "Use the squeeze theorem", "Decide convergence of infinite series (incl. p-series, alternating)", "Expand functions as power and Taylor series"],
+      "foundations": ["limits", "fraction-add-sub", "exponents-roots", "differentiation-rules"],
+      "topics": [
+        { "id": "sequences", "title": "Sequences, bounded and monotonic sequences", "pages": [2, 4], "skills": ["sequences"] },
+        { "id": "limits", "title": "Limits of sequences; squeeze theorem", "pages": [4, 5], "skills": ["sequences"] },
+        { "id": "series", "title": "Infinite series; convergence tests", "pages": [5, 6], "skills": ["series-convergence"] },
+        { "id": "power-taylor", "title": "Power series and Taylor series", "pages": [7, 8], "skills": ["taylor-series"] },
+        { "id": "exercise", "title": "Exercises", "pages": [9, 9], "skills": ["series-convergence"] }
+      ]},
+    { "id": "sy-s1-06", "semesterId": "sy-s1", "order": 8, "chapter": "06", "title": "An Introduction to Fourier Analysis",
+      "file": "Chapter 06_An Introduction to Fourier Analysis.pdf", "objectivesSource": "derived",
+      "objectives": ["Recognise periodic, even and odd functions", "Determine Fourier coefficients", "Expand odd functions; half-range series", "Change interval / arbitrary period", "Use Fourier sine/cosine transforms and their properties"],
+      "foundations": ["trig-graphs", "definite-integrals", "integration-techniques", "series-convergence"],
+      "topics": [
+        { "id": "periodic", "title": "Periodic, even and odd functions", "pages": [2, 3], "skills": ["fourier-series"] },
+        { "id": "coefficients", "title": "Fourier coefficients; odd function expansion", "pages": [4, 5], "skills": ["fourier-series"] },
+        { "id": "half-range", "title": "Half-range series; arbitrary period", "pages": [5, 6], "skills": ["fourier-series"] },
+        { "id": "transforms", "title": "Fourier sine/cosine transforms and properties", "pages": [6, 7], "skills": ["fourier-transform"] },
+        { "id": "exercise", "title": "Exercises", "pages": [8, 8], "skills": ["fourier-series"] }
+      ]},
+    { "id": "sy-s1-nr", "semesterId": "sy-s1", "order": 9, "chapter": "—", "title": "Newton–Raphson Method",
+      "file": "Newton Raphson method.pdf", "objectivesSource": "derived",
+      "objectives": ["Classify simple and multiple roots", "Locate roots graphically and by bisection", "Derive and iterate the Newton–Raphson formula"],
+      "foundations": ["derivative-definition", "slope-intercept", "functions-notation"],
+      "topics": [
+        { "id": "roots", "title": "Simple and multiple roots", "pages": [1, 1], "skills": ["root-finding"] },
+        { "id": "bisection", "title": "Locating roots; interval halving", "pages": [2, 3], "skills": ["root-finding"] },
+        { "id": "newton", "title": "The Newton–Raphson iteration", "pages": [3, 3], "skills": ["root-finding"] }
+      ]}
+  ]
+}

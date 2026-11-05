@@ -1,0 +1,296 @@
+{
+  "$comment": "Master Core: the full, university-independent roadmap. Topic ids are canonical skill ids reused by the Academy Path, lessons, simulations and question templates.",
+  "levels": [
+    {
+      "id": "L0", "number": 0, "title": "Mathematical Readiness",
+      "summary": "Counting, place value, the four operations and the language of maths — starting from zero, with no assumed knowledge.",
+      "units": [
+        { "id": "L0-numbers", "title": "Numbers and counting", "topics": [
+          { "id": "counting-place-value", "title": "Counting and place value" },
+          { "id": "zero-and-comparison", "title": "Zero and comparing quantities" },
+          { "id": "number-line", "title": "The number line" }
+        ]},
+        { "id": "L0-operations", "title": "The four operations", "topics": [
+          { "id": "four-operations", "title": "Addition, subtraction, multiplication, division" },
+          { "id": "mental-arithmetic", "title": "Mental arithmetic strategies" },
+          { "id": "order-of-operations", "title": "Order of operations" }
+        ]},
+        { "id": "L0-signed", "title": "Integers and signed numbers", "topics": [
+          { "id": "negative-numbers", "title": "Negative numbers and signed arithmetic" }
+        ]},
+        { "id": "L0-measure", "title": "Estimation, units and notation", "topics": [
+          { "id": "estimation-rounding", "title": "Estimation and rounding" },
+          { "id": "units-measurement", "title": "Units, measurement and conversion" },
+          { "id": "reading-tables", "title": "Reading tables" },
+          { "id": "math-notation", "title": "Mathematical language, notation and symbols" },
+          { "id": "calculator-literacy", "title": "Calculator literacy" }
+        ]}
+      ]
+    },
+    {
+      "id": "L1", "number": 1, "title": "Arithmetic & Numerical Intuition",
+      "summary": "Factors, fractions, decimals, percentages, ratios and powers — the toolkit behind every later formula.",
+      "units": [
+        { "id": "L1-factors", "title": "Factors and primes", "topics": [
+          { "id": "factors-multiples", "title": "Factors, multiples and divisibility" },
+          { "id": "primes", "title": "Prime numbers and factorisation" },
+          { "id": "gcd-lcm", "title": "HCF/GCD and LCM" }
+        ]},
+        { "id": "L1-fractions", "title": "Fractions", "topics": [
+          { "id": "fractions-meaning", "title": "What a fraction means" },
+          { "id": "equivalent-fractions", "title": "Equivalent fractions and simplifying" },
+          { "id": "fraction-add-sub", "title": "Adding and subtracting fractions" },
+          { "id": "fraction-mul-div", "title": "Multiplying and dividing fractions" },
+          { "id": "mixed-numbers", "title": "Mixed numbers and improper fractions" }
+        ]},
+        { "id": "L1-decimals", "title": "Decimals and percentages", "topics": [
+          { "id": "decimals", "title": "Decimals and place value" },
+          { "id": "recurring-decimals", "title": "Recurring decimals" },
+          { "id": "percentages", "title": "Percentages and percentage change" }
+        ]},
+        { "id": "L1-ratio", "title": "Ratio, proportion and rates", "topics": [
+          { "id": "ratio-proportion", "title": "Ratio and proportion" },
+          { "id": "rates-unit-rates", "title": "Rates and unit rates" }
+        ]},
+        { "id": "L1-powers", "title": "Powers, roots and size", "topics": [
+          { "id": "exponents-roots", "title": "Exponents and roots" },
+          { "id": "scientific-notation", "title": "Scientific notation and significant figures" },
+          { "id": "inequalities-absolute", "title": "Inequalities and absolute value" }
+        ]}
+      ]
+    },
+    {
+      "id": "L2", "number": 2, "title": "Pre-Algebra & Algebra",
+      "summary": "Letters as unknowns and changing quantities, equations, graphs, quadratics, logarithms.",
+      "units": [
+        { "id": "L2-expressions", "title": "Variables and expressions", "topics": [
+          { "id": "variables", "title": "Variables: unknowns and changing quantities" },
+          { "id": "expressions-simplify", "title": "Expressions and simplification" },
+          { "id": "substitution", "title": "Substitution into formulae" }
+        ]},
+        { "id": "L2-equations", "title": "Equations and inequalities", "topics": [
+          { "id": "linear-equations", "title": "Solving linear equations" },
+          { "id": "linear-inequalities", "title": "Linear inequalities" },
+          { "id": "rearranging-formulae", "title": "Rearranging formulae" },
+          { "id": "linear-systems", "title": "Systems of linear equations" }
+        ]},
+        { "id": "L2-graphs", "title": "Coordinates and straight lines", "topics": [
+          { "id": "coordinate-plane", "title": "The coordinate plane" },
+          { "id": "slope-intercept", "title": "Slope, intercept and line equations" }
+        ]},
+        { "id": "L2-polynomials", "title": "Polynomials and quadratics", "topics": [
+          { "id": "expansion-factorisation", "title": "Expansion and factorisation" },
+          { "id": "quadratics", "title": "Quadratic equations, discriminant and completing the square" },
+          { "id": "polynomials", "title": "Polynomials" },
+          { "id": "rational-expressions", "title": "Rational expressions and domain restrictions" }
+        ]},
+        { "id": "L2-explog", "title": "Exponentials and logarithms", "topics": [
+          { "id": "radicals", "title": "Radicals and surds" },
+          { "id": "exponentials-logs", "title": "Exponential functions and logarithms" }
+        ]}
+      ]
+    },
+    {
+      "id": "L3", "number": 3, "title": "Geometry, Trigonometry & Functions",
+      "summary": "Shapes, measurement, the unit circle, waves and the language of functions.",
+      "units": [
+        { "id": "L3-geometry", "title": "Geometry and measurement", "topics": [
+          { "id": "angles-triangles", "title": "Angles, triangles and polygons" },
+          { "id": "area-perimeter-volume", "title": "Area, perimeter and volume" },
+          { "id": "pythagoras", "title": "Pythagorean theorem" },
+          { "id": "coordinate-geometry", "title": "Coordinate geometry and transformations" }
+        ]},
+        { "id": "L3-trig", "title": "Trigonometry", "topics": [
+          { "id": "radians", "title": "Radians and degrees" },
+          { "id": "trig-ratios", "title": "Sine, cosine, tangent and the unit circle" },
+          { "id": "trig-identities", "title": "Trigonometric identities" },
+          { "id": "trig-graphs", "title": "Trigonometric graphs and waves" },
+          { "id": "inverse-trig", "title": "Inverse trigonometric functions" }
+        ]},
+        { "id": "L3-functions", "title": "Functions", "topics": [
+          { "id": "functions-notation", "title": "Relation vs function; domain, codomain, range" },
+          { "id": "function-families", "title": "Function families and transformations" },
+          { "id": "composition-inverse", "title": "Composition and inverse functions" },
+          { "id": "piecewise-asymptotes", "title": "Piecewise functions and asymptotes" }
+        ]}
+      ]
+    },
+    {
+      "id": "L4", "number": 4, "title": "Discrete Mathematics & Reasoning",
+      "summary": "Sets, logic, proof, relations, counting and modular arithmetic.",
+      "units": [
+        { "id": "L4-sets", "title": "Sets and relations", "topics": [
+          { "id": "sets", "title": "Sets, subsets and set operations" },
+          { "id": "cartesian-product", "title": "Cartesian products and ordered pairs" },
+          { "id": "relations", "title": "Relations and their properties" },
+          { "id": "number-systems", "title": "Number systems: ℕ, ℤ, ℚ, ℝ and intervals" }
+        ]},
+        { "id": "L4-logic", "title": "Logic and proof", "topics": [
+          { "id": "propositional-logic", "title": "Propositional logic and truth tables" },
+          { "id": "quantifiers", "title": "Predicates and quantifiers" },
+          { "id": "proof-methods", "title": "Direct proof, contraposition, contradiction" },
+          { "id": "induction", "title": "Mathematical induction and recursion" }
+        ]},
+        { "id": "L4-counting", "title": "Counting", "topics": [
+          { "id": "factorial-permutations", "title": "Factorial and permutations" },
+          { "id": "combinations", "title": "Combinations" },
+          { "id": "pigeonhole", "title": "Pigeonhole principle" }
+        ]},
+        { "id": "L4-number", "title": "Number theory and graphs", "topics": [
+          { "id": "modular-arithmetic", "title": "Modular arithmetic and congruence" },
+          { "id": "graph-theory-basics", "title": "Basic graph theory" }
+        ]}
+      ]
+    },
+    {
+      "id": "L5", "number": 5, "title": "Calculus & Mathematical Analysis",
+      "summary": "Limits, derivatives, integrals, series and multivariable calculus, with numerical companions.",
+      "units": [
+        { "id": "L5-limits", "title": "Limits and continuity", "topics": [
+          { "id": "limits", "title": "Limits, one-sided limits and limits at infinity" },
+          { "id": "continuity", "title": "Continuity" }
+        ]},
+        { "id": "L5-derivatives", "title": "Differentiation", "topics": [
+          { "id": "derivative-definition", "title": "The derivative as a limit and as slope" },
+          { "id": "differentiation-rules", "title": "Product, quotient and chain rules" },
+          { "id": "implicit-differentiation", "title": "Implicit differentiation" },
+          { "id": "higher-derivatives-optimisation", "title": "Higher derivatives, stationary points, optimisation" },
+          { "id": "lhopital", "title": "L'Hôpital's rule" }
+        ]},
+        { "id": "L5-integrals", "title": "Integration", "topics": [
+          { "id": "antiderivatives", "title": "Antiderivatives and indefinite integrals" },
+          { "id": "definite-integrals", "title": "Definite integrals, Riemann sums and the FTC" },
+          { "id": "integration-techniques", "title": "Substitution, parts, partial fractions" },
+          { "id": "multiple-integrals", "title": "Double and triple integrals" }
+        ]},
+        { "id": "L5-series", "title": "Sequences and series", "topics": [
+          { "id": "sequences", "title": "Sequences, boundedness and limits" },
+          { "id": "series-convergence", "title": "Series and convergence tests" },
+          { "id": "taylor-series", "title": "Power and Taylor series" }
+        ]},
+        { "id": "L5-multivariable", "title": "Multivariable calculus", "topics": [
+          { "id": "multivariable-functions", "title": "Functions of several variables" },
+          { "id": "partial-derivatives", "title": "Partial derivatives and the gradient" },
+          { "id": "hessian-extrema", "title": "Hessian, maxima, minima and saddle points" }
+        ]},
+        { "id": "L5-ode", "title": "Differential equations", "topics": [
+          { "id": "ode-intro", "title": "First-order ODEs and separation of variables" },
+          { "id": "pde-intro", "title": "Introductory partial differential equations" }
+        ]}
+      ]
+    },
+    {
+      "id": "L6", "number": 6, "title": "Linear Algebra",
+      "summary": "Vectors, matrices as transformations, determinants, systems, eigenvectors and SVD.",
+      "units": [
+        { "id": "L6-vectors", "title": "Vectors", "topics": [
+          { "id": "vectors", "title": "Vectors, components and arithmetic" },
+          { "id": "dot-cross-product", "title": "Dot and cross products, projection" },
+          { "id": "span-basis", "title": "Linear combinations, span, independence, basis" }
+        ]},
+        { "id": "L6-matrices", "title": "Matrices", "topics": [
+          { "id": "matrices", "title": "Matrix types and operations" },
+          { "id": "matrix-transformations", "title": "Matrix multiplication as transformation" },
+          { "id": "determinants", "title": "Determinants, minors and cofactors" },
+          { "id": "matrix-inverse", "title": "Inverses and solving AX = b" },
+          { "id": "gaussian-elimination", "title": "Gaussian elimination and rank" }
+        ]},
+        { "id": "L6-spectral", "title": "Spectral ideas", "topics": [
+          { "id": "eigen", "title": "Eigenvalues and eigenvectors" },
+          { "id": "orthogonality-least-squares", "title": "Orthogonality and least squares" },
+          { "id": "svd", "title": "Diagonalisation, SVD, positive definite matrices" }
+        ]}
+      ]
+    },
+    {
+      "id": "L7", "number": 7, "title": "Probability & Statistics",
+      "summary": "Describing data, probability, random variables, distributions, inference and regression.",
+      "units": [
+        { "id": "L7-data", "title": "Describing data", "topics": [
+          { "id": "data-types", "title": "Data types, sources and rectangular data" },
+          { "id": "central-tendency", "title": "Mean, median, mode, weighted mean" },
+          { "id": "variability", "title": "Variance, standard deviation, quartiles, MAD" },
+          { "id": "data-visualisation", "title": "Boxplots, histograms, density, scatterplots" },
+          { "id": "correlation", "title": "Correlation (Pearson and Spearman)" }
+        ]},
+        { "id": "L7-probability", "title": "Probability", "topics": [
+          { "id": "probability-basics", "title": "Sample spaces, events, addition rule" },
+          { "id": "conditional-probability", "title": "Conditional probability and independence" },
+          { "id": "bayes", "title": "Total probability and Bayes' theorem" }
+        ]},
+        { "id": "L7-random-variables", "title": "Random variables", "topics": [
+          { "id": "random-variables", "title": "Discrete and continuous random variables; PMF, PDF, CDF" },
+          { "id": "expectation-variance", "title": "Expectation and variance" },
+          { "id": "discrete-distributions", "title": "Uniform, Bernoulli, binomial, Poisson" },
+          { "id": "continuous-distributions", "title": "Uniform, normal, exponential" }
+        ]},
+        { "id": "L7-inference", "title": "Inference and modelling", "topics": [
+          { "id": "sampling-clt", "title": "Sampling, law of large numbers, CLT" },
+          { "id": "confidence-intervals", "title": "Point estimates and confidence intervals" },
+          { "id": "hypothesis-testing", "title": "Hypothesis testing, p-values, error types" },
+          { "id": "linear-regression", "title": "Simple and multiple linear regression" },
+          { "id": "r-python-data", "title": "Data analysis with R and Python" }
+        ]}
+      ]
+    },
+    {
+      "id": "L8", "number": 8, "title": "Numerical Methods & Applied Mathematics",
+      "summary": "Computing answers we cannot get by hand — and knowing how wrong they might be.",
+      "units": [
+        { "id": "L8-numerics", "title": "Numerical foundations", "topics": [
+          { "id": "floating-point", "title": "Floating point and numerical error" },
+          { "id": "root-finding", "title": "Bisection and Newton–Raphson" },
+          { "id": "numerical-calculus", "title": "Numerical differentiation and integration" },
+          { "id": "interpolation", "title": "Interpolation" },
+          { "id": "numerical-ode", "title": "Euler and Runge–Kutta methods" }
+        ]},
+        { "id": "L8-fourier", "title": "Fourier and signals", "topics": [
+          { "id": "fourier-series", "title": "Fourier series, even/odd functions, half-range" },
+          { "id": "fourier-transform", "title": "Fourier transforms, sampling and aliasing" }
+        ]},
+        { "id": "L8-optimisation", "title": "Optimisation", "topics": [
+          { "id": "optimisation-numeric", "title": "Unconstrained and constrained optimisation" }
+        ]}
+      ]
+    },
+    {
+      "id": "L9", "number": 9, "title": "Mathematics for AI, Data Science & ML",
+      "summary": "The mathematics inside gradient descent, backpropagation, PCA, softmax and attention.",
+      "units": [
+        { "id": "L9-optimisation", "title": "Learning as optimisation", "topics": [
+          { "id": "gradient-descent", "title": "Gradient descent, learning rates, loss landscapes" },
+          { "id": "convexity-regularisation", "title": "Convexity and regularisation" },
+          { "id": "backpropagation", "title": "Chain rule and backpropagation" }
+        ]},
+        { "id": "L9-probabilistic", "title": "Probabilistic models", "topics": [
+          { "id": "logistic-regression", "title": "Logistic regression and calibration" },
+          { "id": "entropy-kl", "title": "Entropy, cross-entropy and KL divergence" },
+          { "id": "bayesian-inference", "title": "Bayesian inference" }
+        ]},
+        { "id": "L9-representations", "title": "Representations", "topics": [
+          { "id": "pca", "title": "Covariance, PCA and SVD" },
+          { "id": "distances-clustering", "title": "Distance functions and clustering" },
+          { "id": "softmax-attention", "title": "Embeddings, softmax and attention" }
+        ]}
+      ]
+    },
+    {
+      "id": "L10", "number": 10, "title": "Advanced Exploration",
+      "summary": "Extensible frontier topics. Prerequisites and depth are marked; most are not covered by the university notes.",
+      "units": [
+        { "id": "L10-analysis", "title": "Analysis and complex numbers", "topics": [
+          { "id": "complex-numbers", "title": "Complex numbers and complex analysis foundations" },
+          { "id": "real-analysis", "title": "Introductory rigorous real analysis" }
+        ]},
+        { "id": "L10-applied", "title": "Applied frontiers", "topics": [
+          { "id": "vector-calculus", "title": "Vector calculus" },
+          { "id": "advanced-odes", "title": "Advanced differential equations" },
+          { "id": "information-theory", "title": "Information theory" },
+          { "id": "stochastic-processes", "title": "Stochastic processes" },
+          { "id": "mathematical-modelling", "title": "Mathematical modelling" },
+          { "id": "discrete-optimisation", "title": "Discrete optimisation" }
+        ]}
+      ]
+    }
+  ]
+}

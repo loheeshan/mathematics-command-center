@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+coverage/
+dist/
+*.tsbuildinfo
+.env*
+!.env.example
+test-results/
+playwright-report/
+.turbo/
+# university lecture PDFs are the learner's private material — never commit them
+*.pdf
+*.zip
