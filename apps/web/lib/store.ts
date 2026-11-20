@@ -42,7 +42,7 @@ export const defaultState = (): State => ({
   version: 1,
   createdAt: 0,
   profile: { entryMode: null, goal: null },
-  settings: { theme: "dark", contrast: "normal", reducedMotion: false, explanationMode: "simple", fontScale: 1 },
+  settings: { theme: "light", contrast: "normal", reducedMotion: false, explanationMode: "simple", fontScale: 1 },
   lessons: {},
   attempts: [],
   bookmarks: [],

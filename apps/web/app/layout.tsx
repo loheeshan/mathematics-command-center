@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   description: "Learn mathematics from counting to AI mathematics with visual explanations, working simulations, real practice and a university Academy Path.",
 };
 
-export const viewport: Viewport = { themeColor: "#0B0D12", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#F6F0E5", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" data-theme="light" suppressHydrationWarning>
       <body>
         <AppShell>{children}</AppShell>
       </body>
