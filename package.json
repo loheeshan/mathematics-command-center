@@ -15,7 +15,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit && pnpm --filter @mcc/web typecheck",
     "validate:curriculum": "tsx scripts/validate-curriculum/validate.ts",
     "validate:math": "tsx scripts/validate-math/validate.ts",
-    "test:e2e": "playwright test",
+    "test:e2e": "node scripts/test-e2e.mjs",
     "audit:zip": "python3 -I scripts/audit-university-zip/audit.py",
     "check": "pnpm typecheck && pnpm test && pnpm validate:curriculum && pnpm validate:math && pnpm build"
   },

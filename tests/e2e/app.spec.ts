@@ -12,7 +12,7 @@ const watchErrors = (page: Page) => {
 test("primary navigation has no dead links", async ({ page }) => {
   await page.goto("/");
   const hrefs = await page.locator('nav[aria-label="Primary"] a').evaluateAll((as) => as.map((a) => (a as HTMLAnchorElement).getAttribute("href")!));
-  expect(hrefs.length).toBe(10);
+  expect(hrefs).toEqual(['/', '/paths', '/notebook']);
   for (const h of hrefs) {
     const r = await page.request.get(h);
     expect(r.status(), h).toBe(200);

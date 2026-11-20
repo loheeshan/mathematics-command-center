@@ -5,7 +5,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { actions, useStore, getLoadWarning, useHydrated } from '@/lib/store';
 
 export const NAV = [{ href: '/', label: 'Learn' }, { href: '/paths', label: 'Learning paths' }, { href: '/notebook', label: 'My notebook' }];
-const RESOURCES = [{ href: '/learn', label: 'Full topic library' }, { href: '/simulations', label: 'Visual labs' }, { href: '/practice', label: 'Practice' }, { href: '/academy', label: 'University chapters' }, { href: '/exams', label: 'Exams' }, { href: '/progress', label: 'Reference progress' }, { href: '/library', label: 'Search reference library' }, { href: '/settings', label: 'Settings & data export' }];
+const RESOURCES = [{ href: '/learn', label: 'Full topic library' }, { href: '/simulations', label: 'Visual labs' }, { href: '/practice', label: 'Practice' }, { href: '/academy', label: 'University chapters' }, { href: '/exams', label: 'Exams' }, { href: '/progress', label: 'Reference progress' }, { href: '/library', label: 'Search reference library' }, { href: '/coverage', label: 'Learning coverage' }, { href: '/settings', label: 'Settings & data export' }];
 
 export function AppShell({ children }: { children: ReactNode }) {
   const path = usePathname();

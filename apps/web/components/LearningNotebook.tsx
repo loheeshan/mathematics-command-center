@@ -71,7 +71,7 @@ export function LearningNotebook() {
   };
   const matches = (title:string,concept:string) => `${title} ${concept}`.toLowerCase().includes(search.trim().toLowerCase());
   const visible = pathLessons.filter(l=>matches(l.title,l.concept));
-  return <div className="learning-layout">
+  return <div className="learning-layout" aria-busy={!hydrated}>
     <button className="mobile-course-toggle" aria-expanded={mobileOpen} aria-controls="course-nav" onClick={()=>setMobileOpen(!mobileOpen)}>Course & search <span>{mobileOpen?'Close':'Open'}</span></button>
     <aside id="course-nav" className={`course-sidebar ${mobileOpen?'mobile-open':''}`}>
       <p className="eyebrow">Your learning journey</p><h2 className="course-heading">Small steps. Big ideas.</h2>
@@ -94,7 +94,7 @@ export function LearningNotebook() {
           <div className="visual-toolbar"><span>THE VISUAL WORKBENCH</span><button onClick={()=>setValues(lesson.params.map(p=>p.initial) as [number,number],false)}>Reset</button></div>
           <div className="visual-canvas"><JourneyVisual lesson={lesson} values={values}/></div>
           <div className="visual-result" aria-live="polite" aria-atomic="true"><strong>{model.equation}</strong><span>{saved?.explored?'You changed the model':'Try moving a control below'}</span></div>
-          <div className="visual-controls">{lesson.params.map((p,i)=><div key={`${lesson.id}-${i}`}><label htmlFor={`parameter-${i}`}>{p.label}<output>{values[i]}</output></label><input id={`parameter-${i}`} type="range" min={p.min} max={p.max} step={p.step??1} value={values[i]} onChange={e=>{const v:[number,number]=[...values];v[i]=Number(e.target.value);setValues(v);}}/></div>)}</div>
+          <div className="visual-controls">{lesson.params.map((p,i)=><div key={`${lesson.id}-${i}`}><label htmlFor={`parameter-${i}`}>{p.label}<output>{values[i]}</output></label><input id={`parameter-${i}`} type="range" disabled={!hydrated} min={p.min} max={p.max} step={p.step??1} value={values[i]} onChange={e=>{const v:[number,number]=[...values];v[i]=Number(e.target.value);setValues(v);}}/></div>)}</div>
           <details className="visual-text"><summary>Read the visual as text</summary><p>{model.detail}</p></details>
         </section>
         <section className="explanation-panel" aria-label="Lesson explanation">

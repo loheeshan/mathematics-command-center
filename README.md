@@ -1,5 +1,38 @@
 # Mathematics Command Center (MCC)
 
+## Visual notebook rebuild — 20 November 2026
+
+The main screen is now a guided mathematics notebook, based on the supplied warm-paper visual learning brief. It opens at counting, with one interactive visual and one short explanation at a time.
+
+- **24 authored guided lessons**: counting, addition, negative numbers, multiplication, division, fractions, percentages, powers, equations, functions, geometry, trigonometry, logic, sets, algorithm growth, probability, mean, variance, vectors, matrices, derivatives, integrals, gradient descent and Bayes.
+- **Six learning paths**: complete explorer, student, developer, software engineer, data engineer and AI/ML engineer. Prerequisites remain in each path; lessons are never locked.
+- **Four learning steps**: Understand, Explore, Check, Reflect. Viewing, changing a model and passing a checkpoint are stored separately. Passing one question is not full topic mastery.
+- **Progressive depth**: The idea, The math and In code. The code is an illustrative JavaScript snippet, not an in-browser editor or runtime.
+- **Personal visual notes**: save a reflection with the lesson, step and both parameters, then reopen that exact visual from My notebook. Notes and guided progress are included in Settings JSON export/import.
+- **Accessible controls**: keyboard-operable sliders, labelled flat diagrams, textual descriptions, responsive course navigation, persistent light/dark themes and existing reduced-motion/text-size settings.
+
+The guided sequence is a compact introduction from zero to advanced ideas, not a complete university course. The original detailed lessons, labs, practice, university material and coverage report remain under **Resources**. Their coverage statistics below refer to that larger reference curriculum, independently of the 24 guided lessons.
+
+No login, paid service, API key or database is required. Data stays in the current browser. Existing v1 exports are migrated without discarding their original notes or progress. Export regularly if you need a backup or want to use another browser. The supplied design prompt covered sections 1–3; later, unprovided sections were not assumed to have been received.
+
+Guided source: `packages/curriculum/src/journey.ts`; interface: `apps/web/components/LearningNotebook.tsx`; mathematical models: `apps/web/lib/journey-model.ts`. The design adaptation and commit plan are in `docs/rebuild/visual-learning.md`.
+
+### Run the rebuilt app
+
+```powershell
+cd D:\Command-centers\mathematics-command-center
+corepack pnpm install --frozen-lockfile
+corepack pnpm dev
+```
+
+Open `http://localhost:3000`. Use `corepack pnpm build` and `corepack pnpm start` for a production build. Existing Vercel deployment configuration and the `apps/web` application location are preserved.
+
+On Windows, the build wrapper defaults `UV_THREADPOOL_SIZE` to 1 to avoid intermittent `EPERM` errors from concurrent generated-directory creation. This changes build I/O scheduling only; Linux builds and the application runtime are unchanged. Set `CHROME_PATH` to your installed Chrome executable when running `corepack pnpm test:e2e` without downloaded Playwright browsers. `E2E_DEV=1` runs those tests against a development server; production is the default.
+
+### Original reference curriculum
+
+Rebuild validation: 224 unit tests, 26 production browser tests (including light/dark accessibility checks and 360px layout), 2,818 cross-method math checks, strict TypeScript and a 272-page production build passed. The native in-app preview could not connect to the isolated local server; screenshots and interaction checks were performed by the repository's browser test runner.
+
 A learning platform that takes a learner from the number line to university calculus, linear algebra, statistics and AI mathematics — with visual explanations, working simulations, hand calculation, seeded practice and transparent mastery tracking.
 
 It has two connected paths:

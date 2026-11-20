@@ -58,7 +58,7 @@ export function Notebook() {
   return (
     <div className="mx-auto max-w-4xl space-y-4">
       <PageHeader title="Notebook" kicker="Safe math cells, notes and graphs">
-        Saved in this browser. Python/R execution is not available here (it needs a sandbox and is on the backlog); math cells use MCC’s whitelisted expression evaluator.
+        Keep your ideas and the experiments behind them. Saved in this browser; export a backup from Settings.
       </PageHeader>
       <SavedVisualNotes />
       <h2 className="text-xl font-semibold">Scratchpad: calculate and explore</h2>
@@ -66,7 +66,7 @@ export function Notebook() {
         <section key={c.id} className="rounded-xl border border-line bg-card p-3" aria-label={`${c.kind} cell ${i + 1}`}>
           <div className="mb-2 flex items-center justify-between text-xs text-muted">
             <span className="uppercase">{c.kind}</span>
-            <span className="flex gap-2">
+            <span className="flex gap-2 [&>button]:min-h-9 [&>button]:min-w-9 [&>button]:rounded [&>button]:border [&>button]:border-line">
               <button disabled={i === 0} onClick={() => move(i, -1)} aria-label="Move cell up">↑</button>
               <button disabled={i === cells.length - 1} onClick={() => move(i, 1)} aria-label="Move cell down">↓</button>
               <button onClick={() => remove(c.id)} aria-label="Delete cell">✕</button>
