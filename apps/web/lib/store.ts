@@ -35,6 +35,11 @@ export const StateZ = z.object({
   returnTo: z.object({ href: z.string(), label: z.string() }).nullable(),
   exams: z.array(z.object({ id: z.string(), blueprint: z.string(), seed: z.number(), startedAt: z.number(), finishedAt: z.number(), score: z.number(), total: z.number(), timed: z.boolean(), weakSkills: z.array(z.string()) })),
   lastVisited: z.object({ href: z.string(), label: z.string(), at: z.number() }).nullable(),
+  journey: z.object({
+    role: z.string(), lastLesson: z.string(),
+    lessons: z.record(z.string(), z.object({ viewed: z.boolean(), explored: z.boolean(), checked: z.boolean(), values: z.tuple([z.number().finite(), z.number().finite()]), step: z.number().int().min(0).max(3) })),
+    notes: z.array(z.object({ id: z.string(), lesson: z.string(), step: z.number().int().min(0).max(3), values: z.tuple([z.number().finite(), z.number().finite()]), text: z.string().max(5000), at: z.number() })).max(500),
+  }).default({ role: 'everyone', lastLesson: 'counting', lessons: {}, notes: [] }),
 });
 export type State = z.infer<typeof StateZ>;
 
@@ -52,6 +57,7 @@ export const defaultState = (): State => ({
   returnTo: null,
   exams: [],
   lastVisited: null,
+  journey: { role: 'everyone', lastLesson: 'counting', lessons: {}, notes: [] },
 });
 
 const SERVER_STATE = defaultState();
@@ -102,11 +108,10 @@ function subscribe(l: () => void) {
   listeners.add(l);
   const onStorage = (e: StorageEvent) => {
     if (e.key !== KEY || !e.newValue) return;
-    const p = StateZ.safeParse(JSON.parse(e.newValue));
-    if (p.success) {
-      state = p.data;
-      listeners.forEach((x) => x());
-    }
+    try {
+      const p = StateZ.safeParse(JSON.parse(e.newValue));
+      if (p.success) { state = p.data; listeners.forEach((x) => x()); }
+    } catch { /* Ignore malformed writes from another tab. */ }
   };
   window.addEventListener("storage", onStorage);
   return () => {
@@ -133,6 +138,19 @@ export const getLoadWarning = () => loadWarning;
 
 // ---------------- actions ----------------
 export const actions = {
+  setJourneyRole(role: string) { update(s => ({ ...s, journey: { ...s.journey, role } })); },
+  updateJourneyLesson(id: string, values: [number, number], step: number, evidence?: 'explored' | 'checked') {
+    update(s => {
+      const previous = s.journey.lessons[id];
+      return { ...s, journey: { ...s.journey, lastLesson: id, lessons: { ...s.journey.lessons, [id]: {
+        viewed: true, explored: previous?.explored || evidence === 'explored', checked: previous?.checked || evidence === 'checked', values, step,
+      } } } };
+    });
+  },
+  saveJourneyNote(note: Omit<State['journey']['notes'][number], 'id' | 'at'>) {
+    update(s => ({ ...s, journey: { ...s.journey, notes: [...s.journey.notes, { ...note, text: note.text.slice(0, 5000), id: crypto.randomUUID(), at: Date.now() }].slice(-500) } }));
+  },
+  deleteJourneyNote(id: string) { update(s => ({ ...s, journey: { ...s.journey, notes: s.journey.notes.filter(n => n.id !== id) } })); },
   recordAttempt(a: AttemptEvidence) {
     update((s) => ({ ...s, attempts: [...s.attempts, a].slice(-MAX_ATTEMPTS) }));
   },

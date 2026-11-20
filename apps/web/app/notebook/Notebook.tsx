@@ -5,6 +5,7 @@ import { Plot, FnPath } from "@mcc/visualizers";
 import { useStore, actions, type State } from "@/lib/store";
 import { PageHeader } from "@/components/ui";
 import { Rich, Tex } from "@/components/Rich";
+import { SavedVisualNotes } from '@/components/SavedVisualNotes';
 
 type Cell = State["notebook"][number];
 const uid = () => Math.random().toString(36).slice(2, 10);
@@ -59,6 +60,8 @@ export function Notebook() {
       <PageHeader title="Notebook" kicker="Safe math cells, notes and graphs">
         Saved in this browser. Python/R execution is not available here (it needs a sandbox and is on the backlog); math cells use MCC’s whitelisted expression evaluator.
       </PageHeader>
+      <SavedVisualNotes />
+      <h2 className="text-xl font-semibold">Scratchpad: calculate and explore</h2>
       {cells.map((c, i) => (
         <section key={c.id} className="rounded-xl border border-line bg-card p-3" aria-label={`${c.kind} cell ${i + 1}`}>
           <div className="mb-2 flex items-center justify-between text-xs text-muted">

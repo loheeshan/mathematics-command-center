@@ -10,6 +10,7 @@ const RESOURCES = [{ href: '/learn', label: 'Full topic library' }, { href: '/si
 export function AppShell({ children }: { children: ReactNode }) {
   const path = usePathname();
   const settings = useStore(s => s.settings);
+  const returnTo = useStore(s => s.returnTo);
   const hydrated = useHydrated();
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
@@ -35,6 +36,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <div className="header-tools"><button className="icon-button" aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'} onClick={() => actions.setSettings({ theme: dark ? 'light' : 'dark' })}>{dark ? '☀' : '☾'}</button><button className="quiet-button resource-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="resource-menu">Resources <span aria-hidden="true">⌄</span></button></div>
       {open && <nav id="resource-menu" aria-label="Resources" className="resource-menu">{RESOURCES.map(n => <Link onClick={() => setOpen(false)} href={n.href} key={n.href}>{n.label}</Link>)}</nav>}
     </header>
+    {returnTo && !path.startsWith(returnTo.href.split('#')[0]) && <div className="storage-warning flex flex-wrap items-center gap-3"><Link className="underline" href={returnTo.href}>Return to {returnTo.label}</Link><button className="quiet-button" onClick={()=>actions.setReturnTo(null)}>Dismiss</button></div>}
     {hydrated && getLoadWarning() && <p className="storage-warning" role="alert">{getLoadWarning()}</p>}
     <main id="main" className={path === '/' ? 'workbench-main' : 'reference-main'}>{children}</main>
     <footer className="notebook-footer"><span>MATHEMATICS COMMAND CENTER</span><span>Your own pace. One idea at a time.</span><Link href="/settings">Saved in this browser · Export data</Link></footer>
